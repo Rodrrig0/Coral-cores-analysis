@@ -6,6 +6,7 @@ Institute of Geosciences, Christian-Albretch University Kiel, Germany
 
 # For what?
 1) This code permits the study of coral skeleton variation, and compares them with satellite data (NOAA)
+Density and growth rate are represented during time. Relation between density and growth rate is observed
 2) Create a summary of the trends and results of your core's observations. 
 3) The method to analyse the Sr/Ca ratio in the coral is in development ^^
 
