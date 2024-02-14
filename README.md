@@ -19,6 +19,7 @@ If you have other CT settings, you must change the HU_calibration_data.csv file 
 
 
 # Guide to proper operations
+- Download all the repository folder and unzipp it for be able to use it
 - Only use the script make.R for operate analysis. 
 - Import your core data in **data/CT/csv** in csv file.
 - Please respect the structure of cores data (e.g. with GLOM2_a.csv) with the correct column names
