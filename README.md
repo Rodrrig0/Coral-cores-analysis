@@ -19,7 +19,7 @@ If you have other CT settings, you must change the HU_calibration_data.csv file 
 
 
 # Guide to proper operations
-- Use the script make.R for analysis. 
+- Only use the script make.R for operate analysis. 
 - Import your core data in **data/CT/csv** in csv file.
 - Please respect the structure of cores data (e.g. with GLOM2_a.csv) with the correct column names
 - Regional satellite climate data can be import in the make script
