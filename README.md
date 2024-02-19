@@ -1,7 +1,7 @@
 # Coral Cores Analysis
 Repository made by Romain Journaud
 
-Institute of Geosciences, Christian-Albretch University Kiel, Germany 
+Institute of Geosciences, Christian-Albretch University Kiel, 24106 Germany 
 
 
 # For what?
