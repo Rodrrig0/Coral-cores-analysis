@@ -1,5 +1,5 @@
 # Coral Cores Analysis
-Requesitory made by Romain Journaud
+Repository made by Romain Journaud
 
 Institute of Geosciences, Christian-Albretch University Kiel, Germany 
 
