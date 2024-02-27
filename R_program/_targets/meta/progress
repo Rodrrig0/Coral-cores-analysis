@@ -1,0 +1,14 @@
+name|type|parent|branches|progress
+data_SST|stem|data_SST|0|skipped
+data_core|stem|data_core|0|skipped
+data_enso|stem|data_enso|0|skipped
+month|stem|month|0|skipped
+E_W_IO_SST_data|stem|E_W_IO_SST_data|0|skipped
+CT_cal_data|stem|CT_cal_data|0|skipped
+data_SSTa|stem|data_SSTa|0|skipped
+data_ENSO|stem|data_ENSO|0|skipped
+dataDMI|stem|dataDMI|0|skipped
+data_CTcal|stem|data_CTcal|0|skipped
+plot_ENSO_impact|stem|plot_ENSO_impact|0|skipped
+data_ENSO_T|stem|data_ENSO_T|0|dispatched
+data_ENSO_T|stem|data_ENSO_T|0|errored
