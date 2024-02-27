@@ -1,3 +1,13 @@
+# **New v-2.0. version released!**
+
+
+
+**New functionalities:** Sr/Ca core analysis
+
+- Estimation of the date thanks to maximum and minimum peaks of Sr/Ca Ratio
+- Creation of a full dataset whith distance from the top, estimated date, Sr/Ca ratio, density and SST
+- Creation of a comparison plot with density, Sr/Ca ratio and SST
+
 # Coral Cores Analysis
 Repository made by Romain Journaud
 
