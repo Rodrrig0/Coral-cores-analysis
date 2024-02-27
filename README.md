@@ -1,4 +1,4 @@
-# **New v-2.0. version released!**
+# **New v-2.0 version released!**
 
 
 
