@@ -1,0 +1,86 @@
+---
+title: "CT Core Report"
+output: html_notebook
+
+---
+
+# Name of the core:
+```{r echo=FALSE, message=FALSE}
+print(core_data[i])
+```
+# Calculation of density 
+```{r echo=FALSE}
+data$data_density = get_density(data$HU, lm_model)
+print(head(data))
+```
+
+# Density plot profile, with corresponding years
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = '', fig.width = 20, fig.height = 6)
+plot_CT(x= data$distance, data$data_density)
+```
+
+```{r include=FALSE}
+density_per_year = function(data){
+  mean = tapply(data$data_density, data$Year, mean)
+  sd = tapply(data$data_density, data$Year, sd)
+  n = tapply(data$data_density, data$Year, length)
+  es = sqrt(sd/n)
+
+  table = data.frame(n,mean,sd, es)
+  table$Year = rownames(table)
+
+  plot(table$Year, table$mean, type = "l",
+       main = paste0("Density average of : ", core_data[i]),
+       xlab = "Time", ylab = "Average estimated density")
+  return(table)
+}
+
+#Calcul of core average growth and per year, with plot visualization
+mean_growth = function(data){
+  growth = tapply(data$relative_distance, data$Year, max)
+  mean_growth = mean(growth)
+  data_growth = data.frame(growth)
+  data_growth$Year = row.names(data_growth)
+  plot(data_growth$Year, data_growth$growth, type="l",
+       main = paste0("Growth rate per year of : ",core_data[i]),
+       xlab = "Time", ylab = "Growth rate in mm.y-1")
+  return(print(data_growth))
+}
+```
+
+# Summary of growth and density trends 
+```{r echo=FALSE}
+dens = density_per_year(data)
+print(dens)
+
+min_dens = dens[dens$mean == min(dens$mean),]
+
+max_dens = dens[dens$mean == max(dens$mean),]
+
+print(paste0("Density for : ",core_data[i]))
+print(paste0("Minimum density = ",min_dens$mean," in ",min_dens$Year))
+print(paste0("Maximum density = ",max_dens$mean," in ",max_dens$Year))
+
+growth = mean_growth(data)
+
+min_growth = growth[growth$growth == min(growth$growth),]
+
+max_growth = growth[growth$growth == max(growth$growth),]
+
+print(paste0("Annual growth rate for : ",core_data[i]))
+print(paste0("Minimum growth = ",min_growth$growth,"mm.y-1 in ",min_growth$Year))
+print(paste0("Maximum growth = ",max_growth$growth,"mm.y-1 in ",max_growth$Year))
+
+```
+
+# Comparison between coral core and NOAA estimated SST
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = '', fig.width = 40, fig.height = 6
+)
+SST_CT_comparison(data$distance, data$data_density)
+```
+
